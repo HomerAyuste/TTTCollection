@@ -3,10 +3,13 @@ package com.github.homerayuste.tttcollection;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,4 +64,10 @@ public class Menu extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_menu, container, false);
     }
+
+
+    public void onSettingsButtonClick(View view) {
+        Navigation.findNavController(requireActivity(), R.id.navigation_host_main).navigate(R.id.action_menuFragment_to_settingsFragment);
+    }
+
 }
