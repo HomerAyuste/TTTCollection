@@ -2,6 +2,7 @@
     <string name="app_name">TTTCollection</string>
     <string name="play2d">Play 2D</string>
     <string name="setting">Setting</string>
+    <string name="about">About</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
