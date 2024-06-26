@@ -8,7 +8,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Button;
 
 
 /**
@@ -26,6 +26,8 @@ public class MenuFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+
 
     public MenuFragment() {
         // Required empty public constructor
@@ -65,9 +67,14 @@ public class MenuFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_menu, container, false);
     }
 
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+        view.findViewById(R.id.settingsButton).setOnClickListener(v -> {        Navigation.findNavController(requireActivity(), R.id.navigation_host_main).navigate(R.id.action_menuFragment_to_settingsFragment);
+        });
+    }
 
     public void onSettingsButtonClick(View view) {
-        Navigation.findNavController(requireActivity(), R.id.navigation_host_main).navigate(R.id.action_menuFragment_to_settingsFragment);
     }
 
 }
