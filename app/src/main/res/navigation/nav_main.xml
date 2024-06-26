@@ -19,6 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
+        android:name="com.github.homerayuste.tttcollection.SettingsFragment"
         android:label="setting_menu"
         tools:layout="@xml/settings"
         ></fragment>
