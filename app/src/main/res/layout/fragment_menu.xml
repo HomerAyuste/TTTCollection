@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu"
+    tools:context=".MenuFragment"
     android:orientation="vertical">
 
     <Button
@@ -13,11 +13,12 @@
         android:layout_margin="15dp"
         android:layout_gravity="center"
         android:text="@string/play2d" />
+
     <Button
         android:id="@+id/settingsButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
         android:layout_gravity="center"
-        android:text="@string/setting"/>
+        android:layout_margin="15dp"
+        android:text="@string/setting" />
 </LinearLayout>

@@ -6,7 +6,7 @@
     app:startDestination="@id/menuFragment">
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.github.homerayuste.tttcollection.Menu"
+        android:name="com.github.homerayuste.tttcollection.MenuFragment"
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu">
         <action
