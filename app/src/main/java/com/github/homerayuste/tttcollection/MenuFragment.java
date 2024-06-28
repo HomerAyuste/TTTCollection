@@ -8,7 +8,6 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 
 /**
@@ -70,7 +69,11 @@ public class MenuFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
-        view.findViewById(R.id.settingsButton).setOnClickListener(v -> {        Navigation.findNavController(requireActivity(), R.id.navigation_host_main).navigate(R.id.action_menuFragment_to_settingsFragment);
+        view.findViewById(R.id.settingsButton).setOnClickListener(v -> {
+            Navigation.findNavController(requireActivity(), R.id.navigation_host_main).navigate(R.id.action_menuFragment_to_settingsFragment);
+        });
+        view.findViewById(R.id.playButton).setOnClickListener(v -> {
+            Navigation.findNavController(requireActivity(), R.id.navigation_host_main).navigate(R.id.action_menuFragment_to_RulesFragment);
         });
     }
 

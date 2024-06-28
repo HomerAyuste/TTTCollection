@@ -16,6 +16,10 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
             app:destination="@id/settingsFragment"/>
+        <action
+            android:id="@+id/action_menuFragment_to_RulesFragment"
+            app:destination="@id/rulesFragment"
+            ></action>
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -23,5 +27,12 @@
         android:label="setting_menu"
         tools:layout="@xml/settings"
         ></fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.github.homerayuste.tttcollection.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules">
+
+    </fragment>
 
 </navigation>
