@@ -5,12 +5,15 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -70,9 +73,19 @@ public class RulesFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        //Populating spinner with choices
         Spinner spinner = (Spinner) view.findViewById(R.id.rulesetSpinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getContext(), R.array.ruleset_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+        Button startButton = (Button) view.findViewById(R.id.startButton);
+        startButton.setOnClickListener(v -> {});
+
+        FragmentManager fragmentManager = getChildFragmentManager();
+        fragmentManager.findFragmentById(R.id.versionRuleFragment);
+//        View versionFragment = view.findViewById(R.id.versionRuleFragment);
+//        TextView versionTextName = versionFragment.findViewById(R.id.ruleName);
+//        versionTextName.setText("Version");
     }
 }
