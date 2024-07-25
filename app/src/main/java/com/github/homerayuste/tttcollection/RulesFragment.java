@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,7 @@ public class RulesFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private RuleFragment versionRule;
 
 
     // TODO: Rename and change types of parameters
@@ -61,6 +63,7 @@ public class RulesFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        //versionRule=new RuleFragment("Version");
     }
 
     @Override
@@ -80,7 +83,9 @@ public class RulesFragment extends Fragment {
         spinner.setAdapter(adapter);
 
         Button startButton = (Button) view.findViewById(R.id.startButton);
-        startButton.setOnClickListener(v -> {});
+        startButton.setOnClickListener(v -> {
+            Navigation.findNavController(requireActivity(), R.id.navigation_host_main).navigate(R.id.action_rulesFragment_to_game2d3x3Fragment);
+        });
 
         FragmentManager fragmentManager = getChildFragmentManager();
         fragmentManager.findFragmentById(R.id.versionRuleFragment);
